@@ -1,8 +1,8 @@
-resource "aws_vpc" "my_vpc" {
-  cidr_block = var.cidr
-  instance_tenancy = var.tenancy
-  
+resource "aws_instance" "web" {
+  ami           = "ami-0f403e3180720dd7e"
+  instance_type = "t2.micro"
+
   tags = {
-    Name = var.tag_name
+    Name = "Hello-Pandey"
   }
 }
